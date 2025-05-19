@@ -53,6 +53,45 @@
       margin: 0 0 1rem 0;
       padding-left: 1.2rem;
     }
+    .phone-link {
+  display: inline-flex;
+  align-items: center;
+  color: #125080;
+  font-size: 1.07rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+  border-radius: 2em;
+  padding: 0.3em 0.95em;
+  background: #e6f0fb;
+  box-shadow: 0 2px 12px rgba(18,80,128,0.04);
+}
+.phone-link:hover {
+  background: #d4e7fa;
+  color: #0e3b5c;
+}
+.scroll-down {
+  cursor: pointer;
+  margin: 2.5em auto 1.2em auto;
+  width: 40px;
+  height: 40px;
+  animation: bounce 1.5s infinite;
+  border-radius: 50%;
+  background: #e6f0fb;
+  box-shadow: 0 2px 12px rgba(18,80,128,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s;
+}
+.scroll-down:hover {
+  background: #d4e7fa;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(9px);}
+}
+
     .images {
       display: flex;
       gap: 1rem;
@@ -252,6 +291,12 @@ ul {
       <p class="cta">
         <a href="mailto:Maxenmatthijs25@gmail.coml?subject=Sloep%20Boeken">Vraag offerte aan / Boek nu</a>
       </p>
+      <p style="text-align:center; margin-top:1.5em;">
+  <a href="tel:0612345678" class="phone-link" title="Bel ons">
+    <!-- SVG hier -->
+    06 24978211
+  </a>
+</p>
     </section>
   </main>
   <footer>
