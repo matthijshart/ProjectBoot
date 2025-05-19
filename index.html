@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sloepverhuur Amsterdam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #125080;
+      --secondary: #e6f0fb;
+      --light: #f8fafc;
+    }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--light);
+      color: #222;
+      margin: 0;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1rem 2rem 1rem;
+    }
+    header img {
+      width: 180px;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 24px rgba(18,80,128,0.08);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: .7rem;
+    }
+    main {
+      max-width: 730px;
+      background: #fff;
+      margin: -2rem auto 2rem auto;
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      padding: 2.5rem 2rem 2.7rem 2rem;
+    }
+    section {
+      margin-bottom: 2.7rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    ul {
+      margin: 0 0 1rem 0;
+      padding-left: 1.2rem;
+    }
+    .images {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .images img {
+      border-radius: 0.8rem;
+      width: 48%;
+      max-width: 220px;
+      box-shadow: 0 2px 10px rgba(18,80,128,0.08);
+    }
+    @media (max-width:600px) {
+      main {padding: 1.2rem 0.2rem;}
+      .images img {width: 98%;}
+    }
+    /* Calculator styles */
+    .calculator-block {
+      background: var(--secondary);
+      border-radius: 1rem;
+      padding: 1.5rem 1.3rem 1.7rem 1.3rem;
+      max-width: 420px;
+      margin-bottom: 1.6rem;
+    }
+    .calculator-block label {
+      display: block;
+      margin-top: 1.05rem;
+      font-weight: 500;
+    }
+    .calculator-block input {
+      width: 100%;
+      padding: 0.55rem 0.5rem;
+      margin-top: 0.28rem;
+      border: 1.2px solid #b4ccde;
+      border-radius: 7px;
+      font-size: 1rem;
+      background: #f6fafd;
+      box-sizing: border-box;
+    }
+    .calculator-result {
+      margin-top: 1.3rem;
+      padding: 1.07rem 0.5rem;
+      border-radius: 1rem;
+      background: #eef6fe;
+      text-align: center;
+      font-size: 1.14rem;
+      color: var(--primary);
+      font-weight: bold;
+      min-height: 2.2rem;
+    }
+    .explain {
+      font-size: 0.97rem;
+      margin-bottom: 1.2rem;
+      background: #eef6fe;
+      border-radius: 0.7rem;
+      padding: 0.9rem 1rem;
+    }
+    .cta {
+      display: block;
+      text-align: center;
+      margin: 2.2rem 0 1.2rem 0;
+    }
+    .cta a {
+      background: var(--primary);
+      color: #fff;
+      padding: 1rem 2.2rem;
+      border-radius: 2rem;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.11rem;
+      transition: background .25s;
+      box-shadow: 0 2px 14px rgba(18,80,128,0.09);
+    }
+    .cta a:hover {background: #0e3b5c;}
+    .note {
+      font-size: 0.91rem;
+      color: #7c92a4;
+      margin-top: 1.1rem;
+      text-align: center;
+    }
+    footer {
+      padding: 1.1rem 0 1.3rem 0;
+      text-align: center;
+      font-size: .93rem;
+      color: #888;
+      background: #f7faff;
+      border-top: 1.5px solid #e0e7ef;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="sloep1.jpg" alt="Stoere sloep" />
+    <h1>Sloep Huren Amsterdam</h1>
+    <p>Perfect voor borrels, verjaardagen of teamuitjes!</p>
+  </header>
+  <main>
+    <section>
+      <h2>🛥️ Over de Sloep</h2>
+      <p>Welkom aan boord van deze stoere en charmante sloep!<br>
+      De boot biedt plek aan maximaal <strong>55 personen</strong> en is uitgerust met:</p>
+      <ul>
+        <li>WC aan boord</li>
+        <li>Grote borreltafel</li>
+        <li>Comfortabele kussens</li>
+        <li>Goede speakers</li>
+      </ul>
+      <div class="images">
+        <img src="sloep2.jpg" alt="Binnenkant van de sloep">
+        <img src="sloep3.jpg" alt="Genieten op het water">
+      </div>
+    </section>
+    <section>
+      <h2>💰 Tarieven & Prijscalculator</h2>
+      <div class="explain">
+        <b>Prijs is inclusief schipper en brandstof.</b><br>
+        &bull; <b>€200 per uur</b> tot 12 personen<br>
+        &bull; <b>13-20 personen:</b> €12 p.p. p/u extra<br>
+        &bull; <b>21-30 personen:</b> €10 p.p. p/u extra<br>
+        &bull; <b>31+ personen:</b> €8 p.p. p/u extra<br>
+        Voor grote groepen maken we graag een all-in prijs op maat.<br>
+        <i>Gebruik de calculator hieronder voor een prijsindicatie:</i>
+      </div>
+      <div class="calculator-block">
+        <form id="calcForm" autocomplete="off">
+          <label for="start">Starttijd</label>
+          <input type="time" id="start" value="13:00" required>
+          <label for="end">Eindtijd</label>
+          <input type="time" id="end" value="17:00" required>
+          <label for="persons">Aantal personen</label>
+          <input type="number" id="persons" value="12" min="1" max="55" required>
+        </form>
+        <div class="calculator-result" id="output"></div>
+      </div>
+      <div class="note">* Dit is een prijsindicatie.<br>Neem contact op voor een offerte op maat bij grote groepen.</div>
+    </section>
+    <section>
+      <h2>📸 Foto-impressie</h2>
+      <div class="images">
+        <img src="sloep4.jpg" alt="Groep geniet van een borrel op de sloep">
+        <img src="sloep5.jpg" alt="De sloep varend op een zonnige dag">
+      </div>
+    </section>
+    <section>
+      <h2>📌 Belangrijke informatie</h2>
+      <ul>
+        <li>De hierboven vermelde prijzen zijn indicatief. Neem contact met ons op voor een offerte op maat.</li>
+        <li>Reserveren kan via e-mail of telefoon en is pas definitief na onze bevestiging.</li>
+        <li>Lees voor het boeken de voorwaarden goed door.</li>
+      </ul>
+      <p class="cta">
+        <a href="mailto:info@jouwdomein.nl?subject=Sloep%20Boeken">Vraag offerte aan / Boek nu</a>
+      </p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Sloepverhuur Amsterdam
+  </footer>
+  <script>
+    function parseTime(t) {
+      if(!t) return 0;
+      let [h, m] = t.split(':').map(Number);
+      return h + (m/60);
+    }
+    function calcPrice(persons, hours) {
+      let price = 200; // basis tot 12 pers
+      if (persons > 12) {
+        let extra = persons - 12;
+        // 13-20: €12 p.p.
+        if(extra > 0) {
+          let thisGroup = Math.min(extra, 8);
+          price += thisGroup * 12;
+          extra -= thisGroup;
+        }
+        // 21-30: €10 p.p.
+        if(extra > 0) {
+          let thisGroup = Math.min(extra, 10);
+          price += thisGroup * 10;
+          extra -= thisGroup;
+        }
+        // 31+: €8 p.p.
+        if(extra > 0) {
+          price += extra * 8;
+        }
+      }
+      return price * hours;
+    }
+    function showResult() {
+      let persons = parseInt(document.getElementById('persons').value) || 0;
+      let start = document.getElementById('start').value;
+      let end = document.getElementById('end').value;
+      let output = document.getElementById('output');
+      if(!persons || !start || !end) {
+        output.textContent = '';
+        return;
+      }
+      let startTime = parseTime(start);
+      let endTime = parseTime(end);
+      let hours = endTime - startTime;
+      if (hours <= 0) {
+        output.textContent = 'Eindtijd moet later zijn dan starttijd.';
+        return;
+      }
+      if (persons > 55) {
+        output.textContent = 'Maximaal 55 personen toegestaan.';
+        return;
+      }
+      let price = calcPrice(persons, hours);
+      output.textContent = `Totale prijs voor ${persons} persoon${persons>1?'en':''} en ${hours} uur: €${price.toFixed(2)}`;
+    }
+    ['persons','start','end'].forEach(id => {
+      document.getElementById(id).addEventListener('input', showResult);
+    });
+    window.addEventListener('DOMContentLoaded', showResult);
+  </script>
+</body>
+</html>
