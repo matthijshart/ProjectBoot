@@ -1,128 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sloepverhuur Amsterdam</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pO8F1zxFXdc+Qe70dNDO7xjOIKPQ4j/wcgUp3NEPoPFcAckS4iigIvuXvYDn8KX2HFqRSbVSSASzdMR3vJ9aQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="hero">
-    <div class="hero-content">
-      <img src="IMG_3266.JPG" alt="Sloep" />
-      <h1>Sloepverhuur Amsterdam</h1>
-      <p>Ontdek Amsterdam vanaf het water</p>
-      <a href="tel:0624978211" class="btn primary"><i class="fas fa-phone"></i> 06 24978211</a>
-      <div class="scroll-down" onclick="scrollToSection('prijzen')">
-        <i class="fas fa-chevron-down"></i>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sloepverhuur Amsterdam</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8F1zxFXdc+Qe70dNDO7xjOIKPQ4j/wcgUp3NEPoPFcAckS4iigIvuXvYDn8KX2HFqRSbVSSASzdMR3vJ9aQg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <img src="IMG_3266.JPG" alt="Sloep" />
+        <h1>Sloepverhuur Amsterdam</h1>
+        <p>Ontdek Amsterdam vanaf het water</p>
+        <a href="tel:0624978211" class="btn primary"
+          ><i class="fas fa-phone"></i> 06 24978211</a
+        >
+        <div class="scroll-down" onclick="scrollToSection('prijzen')">
+          <i class="fas fa-chevron-down"></i>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="container">
-    <section id="prijzen">
-      <h2><i class="fas fa-coins"></i> Tarieven</h2>
-      <div class="card prijzen">
-        <p><strong>Basistarief</strong> – €200 voor de eerste 12 personen per uur.</p>
-        <p><strong>Extra personen</strong></p>
+    <main class="container">
+      <section id="prijzen">
+        <h2><i class="fas fa-coins"></i> Tarieven</h2>
+        <div class="card prijzen">
+          <p>
+            <strong>Basistarief</strong> – €200 voor de eerste 12 personen per
+            uur.
+          </p>
+          <p><strong>Extra personen</strong></p>
+          <ul>
+            <li>13 t/m 20 personen: €12 p.p. per uur</li>
+            <li>21 t/m 30 personen: €10 p.p. per uur</li>
+            <li>31+ personen: €8 p.p. per uur</li>
+          </ul>
+          <p class="note">
+            Toeslagen gelden alleen voor het aantal personen boven de drempel.
+          </p>
+        </div>
+        <div class="card calculator">
+          <h3>Bereken zelf uw prijs</h3>
+          <form id="calcForm" autocomplete="off">
+            <label for="start">Starttijd</label>
+            <input type="time" id="start" value="13:00" required />
+            <label for="end">Eindtijd</label>
+            <input type="time" id="end" value="15:00" required />
+            <label for="persons">Aantal personen</label>
+            <input
+              type="number"
+              id="persons"
+              value="12"
+              min="1"
+              max="55"
+              required
+            />
+          </form>
+          <div class="calculator-result" id="output"></div>
+        </div>
+      </section>
+
+      <section id="info">
+        <h2><i class="fas fa-info-circle"></i> Belangrijke informatie</h2>
         <ul>
-          <li>13 t/m 20 personen: €12 p.p. per uur</li>
-          <li>21 t/m 30 personen: €10 p.p. per uur</li>
-          <li>31+ personen: €8 p.p. per uur</li>
+          <li>
+            De hierboven vermelde prijzen zijn indicatief. Neem contact met ons
+            op voor een offerte op maat.
+          </li>
+          <li>
+            Reserveren kan via e-mail of telefoon en is pas definitief na onze
+            bevestiging.
+          </li>
         </ul>
-        <p class="note">Toeslagen gelden alleen voor het aantal personen boven de drempel.</p>
-      </div>
-      <div class="card calculator">
-        <h3>Bereken zelf uw prijs</h3>
-        <form id="calcForm" autocomplete="off">
-          <label for="start">Starttijd</label>
-          <input type="time" id="start" value="13:00" required />
-          <label for="end">Eindtijd</label>
-          <input type="time" id="end" value="15:00" required />
-          <label for="persons">Aantal personen</label>
-          <input type="number" id="persons" value="12" min="1" max="55" required />
-        </form>
-        <div class="calculator-result" id="output"></div>
-      </div>
-    </section>
+        <p class="cta">
+          <a
+            href="mailto:Maxenmatthijs25@gmail.com?subject=Sloep%20Boeken"
+            class="btn"
+            ><i class="fas fa-envelope"></i> Vraag offerte aan / Boek nu</a
+          >
+        </p>
+      </section>
+    </main>
 
-    <section id="info">
-      <h2><i class="fas fa-info-circle"></i> Belangrijke informatie</h2>
-      <ul>
-        <li>De hierboven vermelde prijzen zijn indicatief. Neem contact met ons op voor een offerte op maat.</li>
-        <li>Reserveren kan via e-mail of telefoon en is pas definitief na onze bevestiging.</li>
-      </ul>
-      <p class="cta">
-        <a href="mailto:Maxenmatthijs25@gmail.com?subject=Sloep%20Boeken" class="btn"><i class="fas fa-envelope"></i> Vraag offerte aan / Boek nu</a>
-      </p>
-    </section>
-  </main>
+    <footer class="footer">&copy; 2025 Sloepverhuur Amsterdam</footer>
 
-  <footer class="footer">
-    &copy; 2025 Sloepverhuur Amsterdam
-  </footer>
+    <script>
+      function parseTime(t) {
+        if (!t) return 0;
+        let [h, m] = t.split(":").map(Number);
+        return h + m / 60;
+      }
 
-  <script>
-    function parseTime(t) {
-      if (!t) return 0;
-      let [h, m] = t.split(':').map(Number);
-      return h + m / 60;
-    }
-
-    function calcPrice(persons, hours) {
-      let price = 200;
-      if (persons > 12) {
-        let extra = persons - 12;
-        let thisGroup = Math.min(extra, 8);
-        price += thisGroup * 12;
-        extra -= thisGroup;
-        if (extra > 0) {
-          thisGroup = Math.min(extra, 10);
-          price += thisGroup * 10;
+      function calcPrice(persons, hours) {
+        let price = 200;
+        if (persons > 12) {
+          let extra = persons - 12;
+          let thisGroup = Math.min(extra, 8);
+          price += thisGroup * 12;
           extra -= thisGroup;
+          if (extra > 0) {
+            thisGroup = Math.min(extra, 10);
+            price += thisGroup * 10;
+            extra -= thisGroup;
+          }
+          if (extra > 0) {
+            price += extra * 8;
+          }
         }
-        if (extra > 0) {
-          price += extra * 8;
+        return price * hours;
+      }
+
+      function showResult() {
+        let persons = parseInt(document.getElementById("persons").value) || 0;
+        let start = document.getElementById("start").value;
+        let end = document.getElementById("end").value;
+        let output = document.getElementById("output");
+        if (!persons || !start || !end) {
+          output.textContent = "";
+          return;
         }
+        let startTime = parseTime(start);
+        let endTime = parseTime(end);
+        let hours = endTime - startTime;
+        if (hours <= 0) {
+          output.textContent = "Eindtijd moet later zijn dan starttijd.";
+          return;
+        }
+        if (persons > 55) {
+          output.textContent = "Maximaal 55 personen toegestaan.";
+          return;
+        }
+        let price = calcPrice(persons, hours);
+        output.textContent = `Totale prijs voor ${persons} persoon${persons > 1 ? "en" : ""} en ${hours} uur: €${price.toFixed(2)}`;
       }
-      return price * hours;
-    }
 
-    function showResult() {
-      let persons = parseInt(document.getElementById('persons').value) || 0;
-      let start = document.getElementById('start').value;
-      let end = document.getElementById('end').value;
-      let output = document.getElementById('output');
-      if (!persons || !start || !end) {
-        output.textContent = '';
-        return;
-      }
-      let startTime = parseTime(start);
-      let endTime = parseTime(end);
-      let hours = endTime - startTime;
-      if (hours <= 0) {
-        output.textContent = 'Eindtijd moet later zijn dan starttijd.';
-        return;
-      }
-      if (persons > 55) {
-        output.textContent = 'Maximaal 55 personen toegestaan.';
-        return;
-      }
-      let price = calcPrice(persons, hours);
-      output.textContent = `Totale prijs voor ${persons} persoon${persons > 1 ? 'en' : ''} en ${hours} uur: €${price.toFixed(2)}`;
-    }
+      ["persons", "start", "end"].forEach((id) => {
+        document.getElementById(id).addEventListener("input", showResult);
+      });
+      window.addEventListener("DOMContentLoaded", showResult);
 
-    ['persons', 'start', 'end'].forEach((id) => {
-      document.getElementById(id).addEventListener('input', showResult);
-    });
-    window.addEventListener('DOMContentLoaded', showResult);
-
-    function scrollToSection(id) {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  </script>
-</body>
+      function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    </script>
+  </body>
 </html>
