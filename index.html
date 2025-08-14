@@ -1,352 +1,101 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sloepverhuur Amsterdam</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #125080;
-      --secondary: #e6f0fb;
-      --light: #f8fafc;
-    }
-    body {
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: var(--light);
-      color: #222;
-      margin: 0;
-    }
-    header {
-      background: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 2.5rem 1rem 2rem 1rem;
-    }
-    header img {
-      width: 180px;
-      border-radius: 1rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 24px rgba(18,80,128,0.08);
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: .7rem;
-    }
-    main {
-      max-width: 730px;
-      background: #fff;
-      margin: -2rem auto 2rem auto;
-      border-radius: 1.2rem;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-      padding: 2.5rem 2rem 2.7rem 2rem;
-    }
-    section {
-      margin-bottom: 2.7rem;
-    }
-    h2 {
-      font-size: 1.35rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    ul {
-      margin: 0 0 1rem 0;
-      padding-left: 1.2rem;
-    }
-    .phone-link {
-  display: inline-flex;
-  align-items: center;
-  color: #125080;
-  font-size: 1.07rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
-  border-radius: 2em;
-  padding: 0.3em 0.95em;
-  background: #e6f0fb;
-  box-shadow: 0 2px 12px rgba(18,80,128,0.04);
-}
-.phone-link:hover {
-  background: #d4e7fa;
-  color: #0e3b5c;
-}
-.scroll-down {
-  cursor: pointer;
-  margin: 2.5em auto 1.2em auto;
-  width: 40px;
-  height: 40px;
-  animation: bounce 1.5s infinite;
-  border-radius: 50%;
-  background: #e6f0fb;
-  box-shadow: 0 2px 12px rgba(18,80,128,0.04);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.18s;
-}
-.scroll-down:hover {
-  background: #d4e7fa;
-}
-@keyframes bounce {
-  0%, 100% { transform: translateY(0);}
-  50% { transform: translateY(9px);}
-}
-
-    .images {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .prijzen {
-  background: #e6f0fb;
-  border-radius: 1rem;
-  padding: 1.1rem 1.5rem;
-  margin-bottom: 1.2rem;
-  font-size: 1rem;
-  color: #222; /* normale tekstkleur */
-}
-.prijzen strong {
-  font-size: 1.10rem;
-  color: #125080; /* donkerblauwe kopjes */
-}
-h2 {
-  color: #125080; /* zelfde blauw als de kopjes */
-}
-ul {
-  margin: 0;
-  padding-left: 1.1rem;
-}
-.calculator-title {
-  font-size: 1.13rem;
-  color: #125080;
-  font-weight: 700;
-  margin-bottom: 0.7rem;
-  margin-top: 2.0rem;
-  letter-spacing: 0.01em;
-}
-    .tarief-uitleg {
-  background: #f9fbff;
-  border-left: 4px solid #b4ccde;
-  margin: 0.6em 0 1.4em 0;
-  padding: 0.8em 1em 0.8em 1.2em;
-  font-size: 0.98rem;
-  color: #34475a;
-  border-radius: 0 1em 1em 0;
-}
-
-    
-    .images img {
-      border-radius: 0.8rem;
-      width: 48%;
-      max-width: 220px;
-      box-shadow: 0 2px 10px rgba(18,80,128,0.08);
-    }
-    @media (max-width:600px) {
-      main {padding: 1.2rem 0.2rem;}
-      .images img {width: 98%;}
-    }
-    /* Calculator styles */
-    .calculator-block {
-      background: var(--secondary);
-      border-radius: 1rem;
-      padding: 1.5rem 1.3rem 1.7rem 1.3rem;
-      max-width: 420px;
-      margin-bottom: 1.6rem;
-    }
-    .calculator-block label {
-      display: block;
-      margin-top: 1.05rem;
-      font-weight: 500;
-    }
-    .calculator-block input {
-      width: 100%;
-      padding: 0.55rem 0.5rem;
-      margin-top: 0.28rem;
-      border: 1.2px solid #b4ccde;
-      border-radius: 7px;
-      font-size: 1rem;
-      background: #f6fafd;
-      box-sizing: border-box;
-    }
-    .calculator-result {
-      margin-top: 1.3rem;
-      padding: 1.07rem 0.5rem;
-      border-radius: 1rem;
-      background: #eef6fe;
-      text-align: center;
-      font-size: 1.14rem;
-      color: var(--primary);
-      font-weight: bold;
-      min-height: 2.2rem;
-    }
-    .explain {
-      font-size: 0.97rem;
-      margin-bottom: 1.2rem;
-      background: #eef6fe;
-      border-radius: 0.7rem;
-      padding: 0.9rem 1rem;
-    }
-    .cta {
-      display: block;
-      text-align: center;
-      margin: 2.2rem 0 1.2rem 0;
-    }
-    .cta a {
-      background: var(--primary);
-      color: #fff;
-      padding: 1rem 2.2rem;
-      border-radius: 2rem;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 1.11rem;
-      transition: background .25s;
-      box-shadow: 0 2px 14px rgba(18,80,128,0.09);
-    }
-    .cta a:hover {background: #0e3b5c;}
-    .note {
-      font-size: 0.91rem;
-      color: #7c92a4;
-      margin-top: 1.1rem;
-      text-align: center;
-    }
-    footer {
-      padding: 1.1rem 0 1.3rem 0;
-      text-align: center;
-      font-size: .93rem;
-      color: #888;
-      background: #f7faff;
-      border-top: 1.5px solid #e0e7ef;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pO8F1zxFXdc+Qe70dNDO7xjOIKPQ4j/wcgUp3NEPoPFcAckS4iigIvuXvYDn8KX2HFqRSbVSSASzdMR3vJ9aQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <img src="IMG_3266.JPG" alt="Stoere sloep" />
-    <h1> Gezellige sloep huren Amsterdam</h1>
-    <p>Perfect voor borrels, verjaardagen, teamuitjes en veel meer!</p>
-    <div class="scroll-down" onclick="scrollToNextSection('tarieven')">
-    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-      <path d="M10 15l8 8 8-8" stroke="#125080" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
+  <header class="hero">
+    <div class="hero-content">
+      <img src="IMG_3266.JPG" alt="Sloep" />
+      <h1>Sloepverhuur Amsterdam</h1>
+      <p>Ontdek Amsterdam vanaf het water</p>
+      <a href="tel:0624978211" class="btn primary"><i class="fas fa-phone"></i> 06 24978211</a>
+      <div class="scroll-down" onclick="scrollToSection('prijzen')">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
   </header>
-  <main>
-    <section>
-  <h2> Over de Sloep</h2>
-  <p>
-    Welkom aan boord van deze stoere en charmante sloep!<br>
-    De boot biedt plek aan maximaal <strong>55 personen</strong>, wordt verhuurd <strong>mét schipper</strong> en is uitgerust met:
-  </p>
-  <ul>
-        <li>WC aan boord</li>
-        <li>Grote borreltafel</li>
-        <li>Comfortabele kussens</li>
-        <li>Goede speakers</li>
-      </ul>
-      
+
+  <main class="container">
+    <section id="prijzen">
+      <h2><i class="fas fa-coins"></i> Tarieven</h2>
+      <div class="card prijzen">
+        <p><strong>Basistarief</strong> – €200 voor de eerste 12 personen per uur.</p>
+        <p><strong>Extra personen</strong></p>
+        <ul>
+          <li>13 t/m 20 personen: €12 p.p. per uur</li>
+          <li>21 t/m 30 personen: €10 p.p. per uur</li>
+          <li>31+ personen: €8 p.p. per uur</li>
+        </ul>
+        <p class="note">Toeslagen gelden alleen voor het aantal personen boven de drempel.</p>
       </div>
-    </section>
-   <section id="tarieven">
-  <h2> Tarieven & Prijscalculator</h2>
-      <div class="prijzen">
-  <strong>Basisprijs (t/m 12 personen):</strong><br>
-  €200 per uur
-</div>
-<div class="prijzen">
-  <strong>Meer dan 12 personen? Dan geldt er een toeslag per extra persoon per uur:</strong>
-  <ul>
-    <li>13 t/m 20 personen: €12 p.p. per uur</li>
-    <li>21 t/m 30 personen: €10 p.p. per uur</li>
-    <li>31+ personen: €8 p.p. per uur</li>
-  </ul>
-</div>
-      <p class="tarief-uitleg">
-    <em>
-  Toeslagen zijn alleen voor het aantal personen boven de drempel.<br>
-  
-</em>
-  </p>
-<p><em>Voor grote groepen maken we graag een mooie all-in prijs op maat.</em></p></i>
-      </div>
-  <div class="calculator-title">Bereken zelf uw prijs!</div>
-  <!-- calculator-formulier en output -->
-</div>
-      <div class="calculator-block">
+      <div class="card calculator">
+        <h3>Bereken zelf uw prijs</h3>
         <form id="calcForm" autocomplete="off">
           <label for="start">Starttijd</label>
-          <input type="time" id="start" value="13:00" required>
+          <input type="time" id="start" value="13:00" required />
           <label for="end">Eindtijd</label>
-          <input type="time" id="end" value="15:00" required>
+          <input type="time" id="end" value="15:00" required />
           <label for="persons">Aantal personen</label>
-          <input type="number" id="persons" value="12" min="1" max="55" required>
+          <input type="number" id="persons" value="12" min="1" max="55" required />
         </form>
         <div class="calculator-result" id="output"></div>
       </div>
-      <div class="note">* Dit is een prijsindicatie.<br>Neem contact op voor een offerte op maat bij grote groepen.</div>
     </section>
-    <section>
-      </div>
-    </section>
-    <section>
-      <h2> Belangrijke informatie</h2>
+
+    <section id="info">
+      <h2><i class="fas fa-info-circle"></i> Belangrijke informatie</h2>
       <ul>
         <li>De hierboven vermelde prijzen zijn indicatief. Neem contact met ons op voor een offerte op maat.</li>
         <li>Reserveren kan via e-mail of telefoon en is pas definitief na onze bevestiging.</li>
       </ul>
       <p class="cta">
-        <a href="mailto:Maxenmatthijs25@gmail.com?subject=Sloep%20Boeken">Vraag offerte aan / Boek nu</a>
+        <a href="mailto:Maxenmatthijs25@gmail.com?subject=Sloep%20Boeken" class="btn"><i class="fas fa-envelope"></i> Vraag offerte aan / Boek nu</a>
       </p>
-      <p style="text-align:center; margin-top:1.5em;">
-  <a href="tel:0624 97 82 11" class="phone-link" title="Bel ons">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" style="vertical-align:-0.22em; margin-right:0.4em; fill:#125080;">
-      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.09 22 2 13.91 2 4c0-.55.45-1 1-1H6.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.59.13.36.04.77-.24 1.05l-2.2 2.15z"/>
-    </svg>
-    06 24978211
-  </a>
-</p>
-
     </section>
   </main>
-  <footer>
+
+  <footer class="footer">
     &copy; 2025 Sloepverhuur Amsterdam
   </footer>
+
   <script>
     function parseTime(t) {
-      if(!t) return 0;
+      if (!t) return 0;
       let [h, m] = t.split(':').map(Number);
-      return h + (m/60);
+      return h + m / 60;
     }
+
     function calcPrice(persons, hours) {
-      let price = 200; // basis tot 12 pers
+      let price = 200;
       if (persons > 12) {
         let extra = persons - 12;
-        // 13-20: €12 p.p.
-        if(extra > 0) {
-          let thisGroup = Math.min(extra, 8);
-          price += thisGroup * 12;
-          extra -= thisGroup;
-        }
-        // 21-30: €10 p.p.
-        if(extra > 0) {
-          let thisGroup = Math.min(extra, 10);
+        let thisGroup = Math.min(extra, 8);
+        price += thisGroup * 12;
+        extra -= thisGroup;
+        if (extra > 0) {
+          thisGroup = Math.min(extra, 10);
           price += thisGroup * 10;
           extra -= thisGroup;
         }
-        // 31+: €8 p.p.
-        if(extra > 0) {
+        if (extra > 0) {
           price += extra * 8;
         }
       }
       return price * hours;
     }
+
     function showResult() {
       let persons = parseInt(document.getElementById('persons').value) || 0;
       let start = document.getElementById('start').value;
       let end = document.getElementById('end').value;
       let output = document.getElementById('output');
-      if(!persons || !start || !end) {
+      if (!persons || !start || !end) {
         output.textContent = '';
         return;
       }
@@ -362,17 +111,18 @@ ul {
         return;
       }
       let price = calcPrice(persons, hours);
-      output.textContent = `Totale prijs voor ${persons} persoon${persons>1?'en':''} en ${hours} uur: €${price.toFixed(2)}`;
+      output.textContent = `Totale prijs voor ${persons} persoon${persons > 1 ? 'en' : ''} en ${hours} uur: €${price.toFixed(2)}`;
     }
-    ['persons','start','end'].forEach(id => {
+
+    ['persons', 'start', 'end'].forEach((id) => {
       document.getElementById(id).addEventListener('input', showResult);
     });
     window.addEventListener('DOMContentLoaded', showResult);
-    
-  function scrollToNextSection(id) {
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-</script>
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
 </body>
 </html>
