@@ -1,21 +1,29 @@
 :root {
-  --primary: #0B3D91;
-  --accent: #E94E1B;
-  --light: #f5f7fa;
+  --background: #f9f9f7;
+  --accent: #eadac1;
+  --text: #705e4b;
+  --button: #cfa887;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--light);
+  font-family: "Georgia", serif;
+  background: var(--background);
   margin: 0;
-  color: #333;
+  color: var(--text);
 }
 
 .hero {
-  background: var(--primary);
-  color: #fff;
+  background: var(--accent);
+  color: var(--text);
   text-align: center;
   padding: 4rem 1rem;
+}
+
+.hero::before {
+  content: "✲";
+  display: block;
+  font-size: 2rem;
+  color: var(--text);
 }
 
 .hero img {
@@ -34,10 +42,12 @@ body {
   font-size: 1.2rem;
   animation: bounce 1.5s infinite;
   cursor: pointer;
+  color: var(--text);
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -60,7 +70,7 @@ h2 {
   align-items: center;
   gap: 0.5rem;
   font-size: 1.5rem;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .card {
@@ -89,20 +99,27 @@ h2 {
   border-radius: 2em;
   text-decoration: none;
   font-weight: 600;
+  background: var(--accent);
+  color: var(--text);
   transition: background 0.2s;
 }
 
 .btn.primary {
-  background: var(--accent);
-  color: #fff;
+  background: var(--button);
+  color: var(--background);
 }
 
 .btn:hover {
-  background: #ddd;
+  background: #d5c6ad;
 }
 
 .btn.primary:hover {
-  background: #d44618;
+  background: #b88c6c;
+}
+
+.btn::after {
+  content: " ⟡";
+  font-size: 1.2rem;
 }
 
 .calculator label,
@@ -117,8 +134,8 @@ h2 {
 }
 
 .footer {
-  background: var(--primary);
-  color: #fff;
+  background: var(--accent);
+  color: var(--text);
   text-align: center;
   padding: 1.5rem 1rem;
 }
